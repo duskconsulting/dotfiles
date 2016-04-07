@@ -30,6 +30,7 @@ cd() { builtin cd "$@"; l; } # always list directory files on cd
 
 # Functions for mirroring and cloning web content
 alias wmirr='wget -np -m -w 16 --convert-links' # Morroring with a slight (12 second) pause between attempts
+alias i2pget='http_proxy=127.0.0.1:4444 wget -c --no-dns-cache --bind-address=127.0.0.1'
 
 # Functions for formatting
 reddit_pgp() { cat "$@" | sed 's/^/    /'; } # precede output with 4 spaces, for pasting into Reddit
